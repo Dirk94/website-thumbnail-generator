@@ -71,7 +71,7 @@ func thumbnailHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Read the raw response into a Go struct.
 	type screenshotAPIResponse struct {
-		Screenshot string `json"screenshot"`
+		Screenshot string `json:"screenshot"`
 	}
 	var apiResponse screenshotAPIResponse
 	err = json.NewDecoder(response.Body).Decode(&apiResponse)
